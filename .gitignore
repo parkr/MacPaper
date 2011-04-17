@@ -1,0 +1,15 @@
+build/*
+*.pbxuser
+*.mode1v3
+*.xcodeproj/xcuserdata/*
+*.xcodeproj/project.xcworkspace/xcuserdata/*
+.DS_Store
+profile
+
+Extras/build/
+Extras/*.xcodeproj/xcuserdata/*
+Extras/*.xcodeproj/project.xcworkspace/xcuserdata/*
+
+Source/libCloud/build/*
+Source/libCloud/*.xcodeproj/xcuserdata/*
+Source/libCloud/*.xcodeproj/project.xcworkspace/xcuserdata/*
