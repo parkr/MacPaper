@@ -7,12 +7,14 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "OAuthConsumer.h"
 
-
+@class Instapaper;
 @interface Instapaper : NSObject {
-	NSString *titlee, *desc, *link;
+	NSString *consumerKey, *consumerSecret;
 }
+@property(readwrite, retain) NSString *consumerKey, *consumerSecret;
 
-@property(readwrite) NSString *titlee, *desc, *link;
+- (id) init;
 
 @end

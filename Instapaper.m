@@ -8,8 +8,13 @@
 
 #import "Instapaper.h"
 
-
 @implementation Instapaper
-@synthesize titlee, desc, link;
+@synthesize consumerKey, consumerSecret;
+
+- (id) init{
+	if(self = [super init]){
+		return self;
+	}
+}
 
 @end
