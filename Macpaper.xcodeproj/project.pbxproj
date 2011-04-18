@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
 		256AC3DA0F4B6AC300CF3369 /* MacpaperAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 256AC3D90F4B6AC300CF3369 /* MacpaperAppDelegate.m */; };
-		6318C773135A90B70087CA44 /* Instapaper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6318C772135A90B70087CA44 /* Instapaper.m */; };
 		6318C776135A911A0087CA44 /* InstapaperController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6318C775135A911A0087CA44 /* InstapaperController.m */; };
+		631DF062135BE4AE003AA5DE /* Authenticate.xib in Resources */ = {isa = PBXBuildFile; fileRef = 631DF061135BE4AE003AA5DE /* Authenticate.xib */; };
 		6320BB22135BAEF400999EF0 /* InstapaperOAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 6320BB21135BAEF400999EF0 /* InstapaperOAuth.m */; };
 		6320BB36135BB24F00999EF0 /* Macpaper.icns in Resources */ = {isa = PBXBuildFile; fileRef = 6320BB35135BB24F00999EF0 /* Macpaper.icns */; };
 		63423E82135B925500FDDD3F /* InstapaperUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 63423E81135B925500FDDD3F /* InstapaperUtilities.m */; };
@@ -83,10 +83,9 @@
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		6318C76D135A8F400087CA44 /* Article.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Article.xib; sourceTree = "<group>"; };
-		6318C771135A90B70087CA44 /* Instapaper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Instapaper.h; sourceTree = "<group>"; };
-		6318C772135A90B70087CA44 /* Instapaper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Instapaper.m; sourceTree = "<group>"; };
 		6318C774135A911A0087CA44 /* InstapaperController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstapaperController.h; sourceTree = "<group>"; };
 		6318C775135A911A0087CA44 /* InstapaperController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstapaperController.m; sourceTree = "<group>"; };
+		631DF061135BE4AE003AA5DE /* Authenticate.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Authenticate.xib; sourceTree = "<group>"; };
 		6320BB20135BAEF400999EF0 /* InstapaperOAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstapaperOAuth.h; sourceTree = "<group>"; };
 		6320BB21135BAEF400999EF0 /* InstapaperOAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstapaperOAuth.m; sourceTree = "<group>"; };
 		6320BB35135BB24F00999EF0 /* Macpaper.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Macpaper.icns; sourceTree = "<group>"; };
@@ -228,14 +227,11 @@
 				638A9489135B3BB50052B907 /* InstapaperArticle.m */,
 				6318C774135A911A0087CA44 /* InstapaperController.h */,
 				6318C775135A911A0087CA44 /* InstapaperController.m */,
-				6318C771135A90B70087CA44 /* Instapaper.h */,
-				6318C772135A90B70087CA44 /* Instapaper.m */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
-				6318C76D135A8F400087CA44 /* Article.xib */,
 				6320BB20135BAEF400999EF0 /* InstapaperOAuth.h */,
 				6320BB21135BAEF400999EF0 /* InstapaperOAuth.m */,
 			);
@@ -254,6 +250,8 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6318C76D135A8F400087CA44 /* Article.xib */,
+				631DF061135BE4AE003AA5DE /* Authenticate.xib */,
 				6320BB35135BB24F00999EF0 /* Macpaper.icns */,
 				8D1107310486CEB800E47090 /* Macpaper-Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
@@ -355,6 +353,7 @@
 				638A942C135B35ED0052B907 /* OATestServer.rb in Resources */,
 				638A942F135B35ED0052B907 /* README in Resources */,
 				6320BB36135BB24F00999EF0 /* Macpaper.icns in Resources */,
+				631DF062135BE4AE003AA5DE /* Authenticate.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,7 +366,6 @@
 			files = (
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				256AC3DA0F4B6AC300CF3369 /* MacpaperAppDelegate.m in Sources */,
-				6318C773135A90B70087CA44 /* Instapaper.m in Sources */,
 				6318C776135A911A0087CA44 /* InstapaperController.m in Sources */,
 				638A941C135B35ED0052B907 /* NSMutableURLRequest+Parameters.m in Sources */,
 				638A941D135B35ED0052B907 /* NSString+URLEncoding.m in Sources */,
@@ -460,6 +458,7 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_GC = supported;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
@@ -474,6 +473,7 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_GC = supported;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;

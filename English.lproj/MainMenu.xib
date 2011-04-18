@@ -12,8 +12,8 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="554"/>
 			<integer value="29"/>
+			<integer value="371"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -766,12 +766,12 @@
 									<bool key="NSEnabled">YES</bool>
 									<object class="NSButtonCell" key="NSCell" id="800765543">
 										<int key="NSCellFlags">67239424</int>
-										<int key="NSCellFlags2">134217728</int>
+										<int key="NSCellFlags2">167772160</int>
 										<string key="NSContents">Go</string>
 										<reference key="NSSupport" ref="49533263"/>
 										<reference key="NSControlView" ref="986225619"/>
 										<int key="NSButtonFlags">-2038284033</int>
-										<int key="NSButtonFlags2">268435585</int>
+										<int key="NSButtonFlags2">129</int>
 										<string key="NSAlternateContents"/>
 										<string type="base64-UTF8" key="NSKeyEquivalent">DQ</string>
 										<int key="NSPeriodicDelay">200</int>
@@ -798,7 +798,27 @@
 								<int key="NSButtonFlags">-2038284033</int>
 								<int key="NSButtonFlags2">129</int>
 								<string key="NSAlternateContents"/>
-								<string type="base64-UTF8" key="NSKeyEquivalent">DQ</string>
+								<string key="NSKeyEquivalent"></string>
+								<int key="NSPeriodicDelay">200</int>
+								<int key="NSPeriodicInterval">25</int>
+							</object>
+						</object>
+						<object class="NSButton" id="480902770">
+							<reference key="NSNextResponder" ref="439893737"/>
+							<int key="NSvFlags">268</int>
+							<string key="NSFrame">{{441, 12}, {69, 32}}</string>
+							<reference key="NSSuperview" ref="439893737"/>
+							<bool key="NSEnabled">YES</bool>
+							<object class="NSButtonCell" key="NSCell" id="125857244">
+								<int key="NSCellFlags">67239424</int>
+								<int key="NSCellFlags2">134217728</int>
+								<string key="NSContents">Back</string>
+								<reference key="NSSupport" ref="49533263"/>
+								<reference key="NSControlView" ref="480902770"/>
+								<int key="NSButtonFlags">-2038284033</int>
+								<int key="NSButtonFlags2">129</int>
+								<string key="NSAlternateContents"/>
+								<string key="NSKeyEquivalent"></string>
 								<int key="NSPeriodicDelay">200</int>
 								<int key="NSPeriodicInterval">25</int>
 							</object>
@@ -1136,12 +1156,28 @@
 					<int key="connectionID">574</int>
 				</object>
 				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">linkField</string>
+						<reference key="source" ref="707594984"/>
+						<reference key="destination" ref="579122285"/>
+					</object>
+					<int key="connectionID">588</int>
+				</object>
+				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
-						<string key="label">setArticle:</string>
+						<string key="label">nextArticle:</string>
 						<reference key="source" ref="707594984"/>
 						<reference key="destination" ref="888414162"/>
 					</object>
-					<int key="connectionID">586</int>
+					<int key="connectionID">589</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">previousArticle:</string>
+						<reference key="source" ref="707594984"/>
+						<reference key="destination" ref="480902770"/>
+					</object>
+					<int key="connectionID">592</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
@@ -1149,15 +1185,7 @@
 						<reference key="source" ref="972006081"/>
 						<reference key="destination" ref="888414162"/>
 					</object>
-					<int key="connectionID">587</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBOutletConnection" key="connection">
-						<string key="label">linkField</string>
-						<reference key="source" ref="707594984"/>
-						<reference key="destination" ref="579122285"/>
-					</object>
-					<int key="connectionID">588</int>
+					<int key="connectionID">593</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -1574,6 +1602,7 @@
 							<reference ref="149974049"/>
 							<reference ref="740745877"/>
 							<reference ref="888414162"/>
+							<reference ref="480902770"/>
 						</object>
 						<reference key="parent" ref="972006081"/>
 					</object>
@@ -1687,8 +1716,8 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="986225619"/>
 							<reference ref="990328628"/>
-							<reference ref="927703643"/>
 							<reference ref="579122285"/>
+							<reference ref="927703643"/>
 						</object>
 						<reference key="parent" ref="439893737"/>
 					</object>
@@ -1771,6 +1800,20 @@
 						<int key="objectID">585</int>
 						<reference key="object" ref="175689547"/>
 						<reference key="parent" ref="888414162"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">590</int>
+						<reference key="object" ref="480902770"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="125857244"/>
+						</object>
+						<reference key="parent" ref="439893737"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">591</int>
+						<reference key="object" ref="125857244"/>
+						<reference key="parent" ref="480902770"/>
 					</object>
 				</object>
 			</object>
@@ -1935,6 +1978,9 @@
 					<string>584.IBPluginDependency</string>
 					<string>584.IBViewBoundsToFrameTransform</string>
 					<string>585.IBPluginDependency</string>
+					<string>590.IBPluginDependency</string>
+					<string>590.IBViewBoundsToFrameTransform</string>
+					<string>591.IBPluginDependency</string>
 					<string>73.IBPluginDependency</string>
 					<string>73.ImportedFromIB2</string>
 					<string>81.IBEditorWindowLastContentRect</string>
@@ -2118,6 +2164,11 @@
 					</object>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<object class="NSAffineTransform">
+						<bytes key="NSTransformStruct">P4AAAL+AAABD3IAAwigAAA</bytes>
+					</object>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<integer value="1"/>
 					<string>{{480, 813}, {115, 23}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -2145,7 +2196,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">588</int>
+			<int key="maxID">593</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -2157,11 +2208,13 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>nextArticle:</string>
 							<string>openUrl:</string>
-							<string>setArticle:</string>
+							<string>previousArticle:</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 						</object>
@@ -2170,17 +2223,22 @@
 						<bool key="EncodedWithXMLCoder">YES</bool>
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>nextArticle:</string>
 							<string>openUrl:</string>
-							<string>setArticle:</string>
+							<string>previousArticle:</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<object class="IBActionInfo">
+								<string key="name">nextArticle:</string>
+								<string key="candidateClassName">id</string>
+							</object>
 							<object class="IBActionInfo">
 								<string key="name">openUrl:</string>
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBActionInfo">
-								<string key="name">setArticle:</string>
+								<string key="name">previousArticle:</string>
 								<string key="candidateClassName">id</string>
 							</object>
 						</object>

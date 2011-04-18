@@ -11,50 +11,73 @@
 
 NSMutableArray *articles;
 int article_id;
+InstapaperOAuth *oauthWindow;
 
 @implementation InstapaperController
 
-- (void) viewDidLoad {
-    articles = [[NSMutableArray alloc] init];
+- (void) initArticles{
+	articles = [[NSMutableArray alloc] init];
 	for (int k=0; k<SIZE_OF_SAMPLE_ARRAY; k++){
-		[articles addObject:[[InstapaperArticle alloc]initRandom]];
+		[articles addObject:[[InstapaperArticle alloc]initWithId:k+1]];
 	}
 	article_id = 0;
-	// I guess this is where I'd get the articles using the API.
-	
+}
+
+- (void) setArticle{
+	InstapaperArticle *curr = [articles objectAtIndex:article_id];
+	[titleField setStringValue:[curr titlee]];
+	[descField setStringValue:[curr desc]];
+	[linkField setStringValue:[curr link]];
+	NSLog(@"Article Set: %d", article_id);
+	[curr release];
+}
+
+- (id) init {
+	if (self = [super init]) {
+		// I guess this is where I'd get the articles using the API.
+		oauthWindow = [[InstapaperOAuth alloc]init];
+		[oauthWindow signIn];
+		[self initArticles];
+		return self;
+	}else {
+		return nil;
+	}
+
+}
+
+- (void) dealloc {
+	[oauthWindow dealloc];
+	[articles dealloc];
+	[super dealloc];
+}
+
+- (void) awakeFromNib {
+	[self setArticle];
 }
 
 - (IBAction)openUrl:(id)sender {
-	/*InstapaperArticle *insta;
-	insta = [[InstapaperArticle alloc]initDefault];
-	
-	[insta setTitlee:[titleField stringValue]];
-	[insta setDesc:[descField stringValue]];
-	[insta setLink:[linkField stringValue]];*/
-	
 	NSWorkspace * ws = [NSWorkspace sharedWorkspace];
 	NSURL *url = [NSURL URLWithString:[linkField stringValue]];
 	[ws openURL: url];
-	//[insta release];
+	[ws release];
 }
 
-- (IBAction)setArticle:(id)sender{
-	if(articles == nil){
-		[self viewDidLoad];
-	}
+- (IBAction)nextArticle:(id)sender{
 	article_id += 1;
 	if (article_id >= [articles count]) {
 		// Loop it back to the beginning.
 		article_id = 0;
 	}
-	InstapaperArticle *curr = [articles objectAtIndex:article_id];
-	printf("%d\n", article_id);
-	[titleField setStringValue:[curr titlee]];
-	[descField setStringValue:[curr desc]];
-	NSString* linkk = [curr link];
-	[linkField setStringValue:linkk];
-	[curr release];
+	[self setArticle];
 }
 
+- (IBAction)previousArticle:(id)sender{
+	article_id -= 1;
+	if (article_id < 0) {
+		// Loop it back to the beginning.
+		article_id = [articles count]-1;
+	}
+	[self setArticle];
+}
 
 @end

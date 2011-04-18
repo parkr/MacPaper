@@ -26,10 +26,21 @@
 - (id) initRandom{
 	if(self = [super init]){
 		InstapaperUtilities *util = [[InstapaperUtilities alloc] init];
-		[self setTitlee:[util genRandStringLength:10]];
-		[self setDesc:[util genRandStringLength:40]];
-		[self setLink:[util genRandStringLength:11]];
+		[self setTitlee:[util genRandStringWithLength:10]];
+		[self setDesc:[util genRandStringWithLength:40]];
+		[self setLink:[util genRandStringWithLength:11]];
 		[util autorelease];
+	}else {
+		self = nil;
+	}
+	return self;
+}
+
+- (id) initWithId:(int)this_article_id{
+	if(self = [super init]){
+		[self setTitlee:[NSString stringWithFormat:@"Article %d", this_article_id]];
+		[self setDesc:[NSString stringWithFormat:@"Description %d", this_article_id]];
+		[self setLink:[NSString stringWithFormat:@"http://xkcd.com/%d", this_article_id]];
 	}else {
 		self = nil;
 	}

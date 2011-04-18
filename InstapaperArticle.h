@@ -18,7 +18,8 @@
 
 #pragma mark Constructors
 
-- (id) init;
+- (id) initRandom;
+- (id) initWithId:(int)this_article_id;
 - (id) initWithTitle:(NSString*)title description:(NSString*)description linkk:(NSString*)linkk;
 - (void) dealloc;
 

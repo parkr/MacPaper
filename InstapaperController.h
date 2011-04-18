@@ -7,7 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "OAuthConsumer.h"
+#import "InstapaperOAuth.h"
 #import "InstapaperArticle.h"
 
 @interface InstapaperController : NSObject {
@@ -16,9 +16,10 @@
 	IBOutlet NSTextField *linkField;
 }
 
-- (void) viewDidLoad;
+- (void) awakeFromNib;
 
 - (IBAction)openUrl:(id)sender;
-- (IBAction)setArticle:(id)sender;
+- (IBAction)nextArticle:(id)sender;
+- (IBAction)previousArticle:(id)sender;
 
 @end

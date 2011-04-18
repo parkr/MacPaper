@@ -13,6 +13,6 @@
 
 }
 
--(NSString *) genRandStringLength: (int) len;
+-(NSString *) genRandStringWithLength: (int) len;
 
 @end
