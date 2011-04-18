@@ -1,4 +1,4 @@
-## Instapaper Application for the Mac
+# Macpaper: Instapaper Application for the Mac
 
 So I've given myself a project as I learn Objective-C and how to develop on the Mac. This project is probably going to stay relatively unsuccessful until, at one point, I'll just nail it and finish it in a week. Most of it has to do with learning OAuth and creating multiple instances of a model, etc.
 
