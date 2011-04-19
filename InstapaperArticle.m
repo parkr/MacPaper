@@ -80,7 +80,7 @@
 }
 
 - (void)drawRect:(NSRect)dirtyRect {
-    [[NSColor redColor] set];
+	//[[NSColor blueColor] set];
     NSRectFill(self.bounds);
 }
 

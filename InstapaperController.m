@@ -19,11 +19,13 @@ int article_id;
 
 - (void) initArticles:(NSWindow *)window{
 	self.window = window;
+	int posy = NUMBER_OF_ARTICLES*VIEW_HEIGHT; // For positioning the views. The top left corner is at this y-value.
 	articles = [[NSMutableArray alloc] initWithCapacity:NUMBER_OF_ARTICLES];
-	for (int k=0; k<NUMBER_OF_ARTICLES; k++){
-		[articles insertObject:[[InstapaperArticleController alloc]initWithId:k+1] atIndex:k];
+	for (int k=0; k <NUMBER_OF_ARTICLES; k++){
+		posy -= VIEW_HEIGHT;
+		[articles insertObject:[[InstapaperArticleController alloc]initWithId:k+1 AtX:0 y:posy] atIndex:k];
 		[[window contentView] addSubview:[[articles objectAtIndex:k] getView]];
-		NSLog(@"Content view: %@", [window contentView]);
+		NSLog(@"Created view: %@ at Y: %d", [[articles objectAtIndex:k] getView], posy);
 	}
 	for (id name in articles)
 		NSLog(@"Array element: %@", [name title]);

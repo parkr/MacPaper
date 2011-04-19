@@ -10,18 +10,23 @@
 
 
 @implementation InstapaperArticleController
+@synthesize posx, posy;
 
-- (id) init{
+- (id) initAtX:(int)xval y:(int)yval{
 	if(self = [super initWithNibName:@"Article" bundle:nil]){
 		article = [[InstapaperArticle alloc] init];
+		self.posx = xval;
+		self.posy = yval;
 		[self updateView];
 	}
 	return self;
 }
 
-- (id) initRandom{
+- (id) initRandomAtX:(int)xval y:(int)yval{
 	if(self = [super initWithNibName:@"Article" bundle:nil]){
 		article = [[InstapaperArticle alloc] initRandom];
+		self.posx = xval;
+		self.posy = yval;
 		[self updateView];
 	}else {
 		self = nil;
@@ -29,9 +34,11 @@
 	return self;
 }
 
-- (id) initWithId:(int)this_article_id{
+- (id) initWithId:(int)this_article_id AtX:(int)xval y:(int)yval{
 	if(self = [super initWithNibName:@"Article" bundle:nil]){
 		article = [[InstapaperArticle alloc] initWithId:this_article_id];
+		self.posx = xval;
+		self.posy = yval;
 		if (article == nil) {
 			NSLog(@"You fucked up.");
 		}
@@ -42,9 +49,11 @@
 	return self;
 }
 
-- (id) initWithTitle:(NSString*)title description:(NSString*)description linkk:(NSString*)linkk{
+- (id) initWithTitle:(NSString*)title description:(NSString*)description linkk:(NSString*)linkk AtX:(int)xval y:(int)yval{
 	if(self = [super initWithNibName:@"Article" bundle:nil]){
 		article =  [[InstapaperArticle alloc] initWithTitle:title description:description linkk:linkk];
+		self.posx = xval;
+		self.posy = yval;
 		[self updateView];
 	}
 	return self;
@@ -63,6 +72,7 @@
 	[titleField setStringValue:[article titlee]];
 	[descField setStringValue:[article desc]];
 	[linkField setStringValue:[article link]];
+	article.frame = NSMakeRect(self.posx, self.posy, VIEW_WIDTH, VIEW_HEIGHT);
 	[self setView:article];
 	[article display];
 }
@@ -77,8 +87,13 @@
 }
 
 - (InstapaperArticle*) getView {
-    article.frame = NSMakeRect(0, 0, 525, 118);
 	return article;
+}
+
+- (void) moveToX:(int)x Y:(int)y {
+	self.posx = x;
+	self.posy = y;
+	[self updateView];
 }
 
 @end
