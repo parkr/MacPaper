@@ -26,6 +26,9 @@
 }
 
 - (void) dealloc {
+	[consumerKey autorelease];
+	[consumerSecret autorelease];
+	[oauthToken autorelease];
 	[super dealloc];
 }
 

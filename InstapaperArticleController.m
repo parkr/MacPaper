@@ -12,7 +12,7 @@
 @implementation InstapaperArticleController
 
 - (id) init{
-	if(self = [super initWithWindowNibName:@"Article"]){
+	if(self = [super initWithNibName:@"Article" bundle:nil]){
 		article = [[InstapaperArticle alloc] init];
 		[self updateView];
 	}
@@ -20,7 +20,7 @@
 }
 
 - (id) initRandom{
-	if(self = [super initWithWindowNibName:@"Article"]){
+	if(self = [super initWithNibName:@"Article" bundle:nil]){
 		article = [[InstapaperArticle alloc] initRandom];
 		[self updateView];
 	}else {
@@ -30,7 +30,7 @@
 }
 
 - (id) initWithId:(int)this_article_id{
-	if(self = [super initWithWindowNibName:@"Article"]){
+	if(self = [super initWithNibName:@"Article" bundle:nil]){
 		article = [[InstapaperArticle alloc] initWithId:this_article_id];
 		if (article == nil) {
 			NSLog(@"You fucked up.");
@@ -43,7 +43,7 @@
 }
 
 - (id) initWithTitle:(NSString*)title description:(NSString*)description linkk:(NSString*)linkk{
-	if(self = [super initWithWindowNibName:@"Article"]){
+	if(self = [super initWithNibName:@"Article" bundle:nil]){
 		article =  [[InstapaperArticle alloc] initWithTitle:title description:description linkk:linkk];
 		[self updateView];
 	}
@@ -63,10 +63,21 @@
 	[titleField setStringValue:[article titlee]];
 	[descField setStringValue:[article desc]];
 	[linkField setStringValue:[article link]];
+	[self setView:article];
+	[article display];
+}
+
+- (IBAction) update:(id)sender{
+	[self updateView];
+	NSLog(@"View updated.");
 }
 
 - (NSString*) title {
 	return [article titlee];
+}
+
+- (InstapaperArticle*) getView{
+	return article;
 }
 
 @end

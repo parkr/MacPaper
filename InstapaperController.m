@@ -17,13 +17,12 @@ int article_id;
 
 @implementation InstapaperController
 
-- (void) initArticles:(NSWindow *)window {
+- (void) initArticles:(NSWindow *)window{
+	self.window = window;
 	articles = [[NSMutableArray alloc] initWithCapacity:NUMBER_OF_ARTICLES];
-	NSView *articlesView = [[NSView alloc]init];
-	[window setContentView:articlesView];
 	for (int k=0; k<NUMBER_OF_ARTICLES; k++){
 		[articles insertObject:[[InstapaperArticleController alloc]initWithId:k+1] atIndex:k];
-		[articlesView addSubview:[articles objectAtIndex:k]];
+		[[window contentView] addSubview:[[articles objectAtIndex:k] getView]];
 		NSLog(@"Content view: %@", [window contentView]);
 	}
 	for (id name in articles)
@@ -32,7 +31,7 @@ int article_id;
 }
 
 - (id) init:(NSWindow *)window {
-	if (self = [super init]) {
+	if (self = [super initWithWindow:window]) {
 		// I guess this is where I'd get the articles using the API.
 		//oauthWindow = [[InstapaperOAuth alloc]init];
 		//[oauthWindow signIn];

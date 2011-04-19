@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import "InstapaperArticle.h"
 
-@interface InstapaperArticleController : NSWindowController {
+@interface InstapaperArticleController : NSViewController {
 	IBOutlet NSTextField *titleField;
 	IBOutlet NSTextField *descField;
 	IBOutlet NSTextField *linkField;
@@ -21,7 +21,9 @@
 - (id) initWithTitle:(NSString*)title description:(NSString*)description linkk:(NSString*)linkk;
 - (void) dealloc;
 
--(void) updateView;
+- (void) updateView;
+- (IBAction) update:(id)sender;
 - (NSString*) title;
+- (InstapaperArticle*) getView;
 
 @end
