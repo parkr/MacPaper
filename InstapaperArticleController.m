@@ -76,7 +76,8 @@
 	return [article titlee];
 }
 
-- (InstapaperArticle*) getView{
+- (InstapaperArticle*) getView {
+    article.frame = NSMakeRect(0, 0, 525, 118);
 	return article;
 }
 

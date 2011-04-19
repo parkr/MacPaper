@@ -8,7 +8,6 @@
 
 #import "MacpaperAppDelegate.h"
 #import "InstapaperController.h"
-#import "RedView.h"
 
 @implementation MacpaperAppDelegate
 
@@ -19,11 +18,8 @@
 	InstapaperController *insta = [[InstapaperController alloc] init:window];
 	[window setWindowController:insta];
 	[insta release];
-	[[window contentView] addSubview:[[RedView alloc] initWithFrame:NSMakeRect(10.0, 10.0, 100.0, 20.0)]];
 	NSLog(@"%@", [[window contentView] subviews]);
-	[window display];
-	[[window contentView] display];
-	//[window setContentView:[[NSView alloc]init]];
+	[window makeKeyAndOrderFront:self];
 }
 
 - (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)sender

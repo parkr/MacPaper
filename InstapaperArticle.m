@@ -79,4 +79,9 @@
 	[ws release];
 }
 
+- (void)drawRect:(NSRect)dirtyRect {
+    [[NSColor redColor] set];
+    NSRectFill(self.bounds);
+}
+
 @end

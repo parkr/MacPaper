@@ -38,8 +38,6 @@
 		63CFA7D6135E082B00B29F69 /* Article.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63CFA7D2135E082B00B29F69 /* Article.xib */; };
 		63CFA7D7135E082C00B29F69 /* Authenticate.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63CFA7D4135E082B00B29F69 /* Authenticate.xib */; };
 		63CFA7E6135E09C500B29F69 /* InstapaperArticleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63CFA7E5135E09C500B29F69 /* InstapaperArticleController.m */; };
-		63CFAB2B135E367100B29F69 /* RedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63CFAB2A135E367100B29F69 /* RedView.m */; };
-		63CFAB2E135E372F00B29F69 /* RedView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63CFAB2C135E372F00B29F69 /* RedView.xib */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
@@ -141,9 +139,6 @@
 		63CFA7D5135E082B00B29F69 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/Authenticate.xib; sourceTree = "<group>"; };
 		63CFA7E4135E09C500B29F69 /* InstapaperArticleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstapaperArticleController.h; sourceTree = "<group>"; };
 		63CFA7E5135E09C500B29F69 /* InstapaperArticleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstapaperArticleController.m; sourceTree = "<group>"; };
-		63CFAB29135E367100B29F69 /* RedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedView.h; sourceTree = "<group>"; };
-		63CFAB2A135E367100B29F69 /* RedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedView.m; sourceTree = "<group>"; };
-		63CFAB2D135E372F00B29F69 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/RedView.xib; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Macpaper-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Macpaper-Info.plist"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* Macpaper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Macpaper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -230,8 +225,6 @@
 			children = (
 				256AC3D80F4B6AC300CF3369 /* MacpaperAppDelegate.h */,
 				256AC3D90F4B6AC300CF3369 /* MacpaperAppDelegate.m */,
-				63CFAB29135E367100B29F69 /* RedView.h */,
-				63CFAB2A135E367100B29F69 /* RedView.m */,
 				638A9488135B3BB50052B907 /* InstapaperArticle.h */,
 				638A9489135B3BB50052B907 /* InstapaperArticle.m */,
 				63CFA7E4135E09C500B29F69 /* InstapaperArticleController.h */,
@@ -247,7 +240,6 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
-				63CFAB2C135E372F00B29F69 /* RedView.xib */,
 			);
 			name = Macpaper;
 			sourceTree = "<group>";
@@ -369,7 +361,6 @@
 				6320BB36135BB24F00999EF0 /* Macpaper.icns in Resources */,
 				63CFA7D6135E082B00B29F69 /* Article.xib in Resources */,
 				63CFA7D7135E082C00B29F69 /* Authenticate.xib in Resources */,
-				63CFAB2E135E372F00B29F69 /* RedView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,7 +397,6 @@
 				63423E82135B925500FDDD3F /* InstapaperUtilities.m in Sources */,
 				6320BB22135BAEF400999EF0 /* InstapaperOAuth.m in Sources */,
 				63CFA7E6135E09C500B29F69 /* InstapaperArticleController.m in Sources */,
-				63CFAB2B135E367100B29F69 /* RedView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,14 +433,6 @@
 				63CFA7D5135E082B00B29F69 /* English */,
 			);
 			name = Authenticate.xib;
-			sourceTree = "<group>";
-		};
-		63CFAB2C135E372F00B29F69 /* RedView.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				63CFAB2D135E372F00B29F69 /* English */,
-			);
-			name = RedView.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
