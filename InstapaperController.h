@@ -7,19 +7,12 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "InstapaperOAuth.h"
-#import "InstapaperArticle.h"
 
-@interface InstapaperController : NSObject {
-	IBOutlet NSTextFieldCell *titleField;
-	IBOutlet NSTextFieldCell *descField;
-	IBOutlet NSTextField *linkField;
+@interface InstapaperController : NSWindowController {
+	
 }
 
+- (id) init:(NSWindow*)window;
 - (void) awakeFromNib;
-
-- (IBAction)openUrl:(id)sender;
-- (IBAction)nextArticle:(id)sender;
-- (IBAction)previousArticle:(id)sender;
 
 @end

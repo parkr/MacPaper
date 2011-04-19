@@ -7,13 +7,21 @@
 //
 
 #import "MacpaperAppDelegate.h"
+#import "InstapaperController.h"
 
 @implementation MacpaperAppDelegate
 
 @synthesize window;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-	// Insert code here to initialize your application 
+	// Gotta finish opening the app.
+	InstapaperController *insta = [[InstapaperController alloc] init:window];
+	[window setWindowController:insta];
+}
+
+- (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)sender
+{
+	return YES;
 }
 
 @end

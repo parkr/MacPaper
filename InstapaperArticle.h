@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 
 
-@interface InstapaperArticle : NSObject {
+@interface InstapaperArticle : NSView {
 	NSString *titlee, *desc, *link;
 	BOOL is_default;
 }
@@ -26,5 +26,9 @@
 #pragma mark Methods
 
 - (BOOL) isDefault;
+
+#pragma mark View
+
+- (IBAction)openUrl:(id)sender;
 
 @end

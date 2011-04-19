@@ -15,7 +15,7 @@
 	#pragma mark Constructors
 
 - (id) init{
-	if( self = [super init] ){
+	if(self = [super init]){
 		[self setTitlee:[[NSString alloc] initWithString:@"This is a title"]];
 		[self setDesc:[[NSString alloc] initWithString:@"This is a description"]];
 		[self setLink:[[NSString alloc] initWithString:@"http://instapaper.com"]];
@@ -48,7 +48,7 @@
 }
 
 - (id) initWithTitle:(NSString*)title description:(NSString*)description linkk:(NSString*)linkk{
-	if( self = [super init] ){
+	if(self = [super init]){
 		[self setTitlee:title];
 		[self setDesc:description];
 		[self setLink:linkk];
@@ -56,7 +56,7 @@
 	return self;
 }
 
-- (void)dealloc{
+- (void) dealloc{
 	[titlee release];
 	[desc release];
 	[link release];
@@ -67,6 +67,16 @@
 
 - (BOOL) isDefault{
 	return self.is_default;
+}
+
+#pragma mark View
+
+- (IBAction)openUrl:(id)sender {
+	NSWorkspace * ws = [NSWorkspace sharedWorkspace];
+	//NSURL *url = [NSURL URLWithString:[linkField stringValue]];
+	NSURL *url = [NSURL URLWithString:link];
+	[ws openURL: url];
+	[ws release];
 }
 
 @end
