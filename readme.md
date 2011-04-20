@@ -13,3 +13,6 @@ Plenty to learn. It'll probably be fully coded in a year or so. Check back then.
 Plenty to keep me going.
 
 	Last edited: Apr 17, 2011
+	
+## Special Thanks
+1. [Nick Paulson](http://www.nickpaulson.com/) for answering my newbie questions, no matter how dumb they were.

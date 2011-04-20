@@ -17,6 +17,7 @@
 	// Need to have that content scroll. (used IB to create scroll view inside window. Put content inside this window.)
 	NSArray *wSubviews = [[window contentView]subviews];
 	[window setContentView:[wSubviews objectAtIndex:0]];
+	[wSubviews release];
 	// Gotta finish opening the app.
 	[window setWindowController:[[InstapaperController alloc] init:window]];
 	// What do we have?
