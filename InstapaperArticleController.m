@@ -13,6 +13,9 @@
 @synthesize posx, posy;
 
 - (id) initAtX:(int)xval y:(int)yval{
+	// Initializes the view controller by opening up the nib file, 
+	//		creating an article (NSView) for the view controller,
+	//		and give the view controller some X and Y coordinates.
 	if(self = [super initWithNibName:@"Article" bundle:nil]){
 		article = [[InstapaperArticle alloc] init];
 		self.posx = xval;
@@ -23,6 +26,9 @@
 }
 
 - (id) initRandomAtX:(int)xval y:(int)yval{
+	// Initializes the view controller by opening up the nib file, 
+	//		creating an article (NSView) for the view controller,
+	//		and give the view controller some X and Y coordinates.
 	if(self = [super initWithNibName:@"Article" bundle:nil]){
 		article = [[InstapaperArticle alloc] initRandom];
 		self.posx = xval;
@@ -35,6 +41,9 @@
 }
 
 - (id) initWithId:(int)this_article_id AtX:(int)xval y:(int)yval{
+	// Initializes the view controller by opening up the nib file, 
+	//		creating an article (NSView) for the view controller,
+	//		and give the view controller some X and Y coordinates.
 	if(self = [super initWithNibName:@"Article" bundle:nil]){
 		article = [[InstapaperArticle alloc] initWithId:this_article_id];
 		self.posx = xval;
@@ -50,6 +59,9 @@
 }
 
 - (id) initWithTitle:(NSString*)title description:(NSString*)description linkk:(NSString*)linkk AtX:(int)xval y:(int)yval{
+	// Initializes the view controller by opening up the nib file, 
+	//		creating an article (NSView) for the view controller,
+	//		and give the view controller some X and Y coordinates.
 	if(self = [super initWithNibName:@"Article" bundle:nil]){
 		article =  [[InstapaperArticle alloc] initWithTitle:title description:description linkk:linkk];
 		self.posx = xval;
@@ -60,15 +72,18 @@
 }
 
 - (void) dealloc{
+	// Throw it away.
 	[article dealloc];
 	[super dealloc];
 }
 
 - (void) awakeFromNib{
+	// Awake? Update me.
 	[self updateView];
 }
 
 - (void) updateView{
+	// Sets the values of the NSTextFields, sets the frame and displays the article.
 	[titleField setStringValue:[article titlee]];
 	[descField setStringValue:[article desc]];
 	[linkField setStringValue:[article link]];
@@ -78,19 +93,23 @@
 }
 
 - (IBAction) update:(id)sender{
+	// Update. Used by an outlet for debugging.
 	[self updateView];
 	NSLog(@"View updated.");
 }
 
 - (NSString*) title {
+	// Returns the title of the article.
 	return [article titlee];
 }
 
 - (InstapaperArticle*) getView {
+	// Returns the NSView housed in this NSViewController.
 	return article;
 }
 
 - (void) moveToX:(int)x Y:(int)y {
+	// Sets the X and Y values to those that were inputted and updates the display.
 	self.posx = x;
 	self.posy = y;
 	[self updateView];

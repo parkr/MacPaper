@@ -187,8 +187,25 @@
 				</object>
 				<string key="NSFrameSize">{525, 116}</string>
 				<reference key="NSSuperview"/>
-				<object class="CIAdditionCompositing" key="NSViewCompositeFilter">
-					<bool key="CIEnabled">YES</bool>
+				<object class="NSDictionary" key="NSViewAnimations">
+					<string key="NS.key.0">subviews</string>
+					<object class="CATransition" key="NS.object.0">
+						<object class="CIBarsSwipeTransition" key="filter">
+							<real value="3.1415926535900001" key="CI_inputAngle"/>
+							<real value="30" key="CI_inputWidth"/>
+							<real value="10" key="CI_inputBarOffset"/>
+							<real value="0.0" key="CI_inputTime"/>
+							<bool key="CIEnabled">YES</bool>
+						</object>
+						<string key="subtype">fromTop</string>
+						<string key="type">fade</string>
+						<object class="NSArray" key="__CACodingContents">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>filter</string>
+							<string>subtype</string>
+							<string>type</string>
+						</object>
+					</object>
 				</object>
 				<int key="NSViewLayerContentsRedrawPolicy">2</int>
 				<string key="NSClassName">InstapaperArticle</string>
@@ -385,13 +402,13 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 						</object>
 					</object>
-					<string>{{394, 256}, {525, 116}}</string>
+					<string>{{330, 198}, {525, 116}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<object class="NSAffineTransform"/>
 					<real value="0.0"/>
 					<object class="NSColor">
 						<int key="NSColorSpace">1</int>
-						<bytes key="NSRGB">MSAxIDEAA</bytes>
+						<bytes key="NSRGB">MCAxIDAuMDE2MDYyNjA4ODcAA</bytes>
 					</object>
 					<real value="0.0"/>
 					<real value="0.0"/>

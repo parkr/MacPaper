@@ -16,6 +16,7 @@
 
 - (id) init{
 	if(self = [super init]){
+		// Initialize it with a generic string.
 		[self setTitlee:[[NSString alloc] initWithString:@"This is a title"]];
 		[self setDesc:[[NSString alloc] initWithString:@"This is a description"]];
 		[self setLink:[[NSString alloc] initWithString:@"http://instapaper.com"]];
@@ -25,6 +26,7 @@
 
 - (id) initRandom{
 	if(self = [super init]){
+		// Initialize it with a random string.
 		InstapaperUtilities *util = [[InstapaperUtilities alloc] init];
 		[self setTitlee:[util genRandStringWithLength:10]];
 		[self setDesc:[util genRandStringWithLength:40]];
@@ -38,6 +40,7 @@
 
 - (id) initWithId:(int)this_article_id{
 	if(self = [super init]){
+		// Initialize it with a more specific string.
 		[self setTitlee:[NSString stringWithFormat:@"Article %d", this_article_id]];
 		[self setDesc:[NSString stringWithFormat:@"Description %d", this_article_id]];
 		[self setLink:[NSString stringWithFormat:@"http://xkcd.com/%d", this_article_id]];
@@ -49,6 +52,7 @@
 
 - (id) initWithTitle:(NSString*)title description:(NSString*)description linkk:(NSString*)linkk{
 	if(self = [super init]){
+		// Initialize it with what was inputted.
 		[self setTitlee:title];
 		[self setDesc:description];
 		[self setLink:linkk];
@@ -57,6 +61,7 @@
 }
 
 - (void) dealloc{
+	// Throw it away.
 	[titlee release];
 	[desc release];
 	[link release];
@@ -72,6 +77,7 @@
 #pragma mark View
 
 - (IBAction)openUrl:(id)sender {
+	// Open the URL of that particular article.
 	NSWorkspace * ws = [NSWorkspace sharedWorkspace];
 	//NSURL *url = [NSURL URLWithString:[linkField stringValue]];
 	NSURL *url = [NSURL URLWithString:link];
@@ -80,6 +86,7 @@
 }
 
 - (void)drawRect:(NSRect)dirtyRect {
+	// Show the view.
 	//[[NSColor blueColor] set];
     NSRectFill(self.bounds);
 }

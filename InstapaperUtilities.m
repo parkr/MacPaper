@@ -13,6 +13,7 @@ NSString *letters = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ012345
 @implementation InstapaperUtilities
 
 -(NSString *) genRandStringWithLength: (int) len {
+	// Method used to generate random string of the inputted length.
     NSMutableString *randomString = [NSMutableString stringWithCapacity: len];
     for (int i=0; i<len; i++) {
 		[randomString appendFormat:@"%c", [letters characterAtIndex: rand()%[letters length]]];

@@ -14,10 +14,12 @@
 @synthesize window;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+	// Need to have that content scroll. (used IB to create scroll view inside window. Put content inside this window.)
+	NSArray *wSubviews = [[window contentView]subviews];
+	[window setContentView:[wSubviews objectAtIndex:0]];
 	// Gotta finish opening the app.
-	InstapaperController *insta = [[InstapaperController alloc] init:window];
-	[window setWindowController:insta];
-	[insta release];
+	[window setWindowController:[[InstapaperController alloc] init:window]];
+	// What do we have?
 	NSLog(@"%@", [[window contentView] subviews]);
 	[window makeKeyAndOrderFront:self];
 }
