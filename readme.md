@@ -4,4 +4,12 @@ So I've given myself a project as I learn Objective-C and how to develop on the 
 
 Plenty to learn. It'll probably be fully coded in a year or so. Check back then.
 
+### Todo:
+1. Figure out why NSViews (InstapaperArticles) are black.
+2. Figure out how to make the NSWindow scroll to allow all of the NSViews to be seen.
+3. Check functionality with going to the sites, etc.
+4. Implement OAuth and read in the files.
+
+Plenty to keep me going.
+
 	Last edited: Apr 17, 2011
