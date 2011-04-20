@@ -73,6 +73,9 @@
 
 - (void) dealloc{
 	// Throw it away.
+	[titleField release];
+	[descField release];
+	[linkField release];
 	[article dealloc];
 	[super dealloc];
 }
