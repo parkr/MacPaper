@@ -18,9 +18,9 @@
 
 #pragma mark Constructors
 
-- (id) initRandom;
-- (id) initWithId:(int)this_article_id;
-- (id) initWithTitle:(NSString*)title description:(NSString*)description linkk:(NSString*)linkk;
+- (id) initRandomWithFrame:(NSRect)frameRect;
+- (id) initWithId:(int)this_article_id frame:(NSRect)frameRect;
+- (id) initWithTitle:(NSString*)title description:(NSString*)description linkk:(NSString*)linkk frame:(NSRect)frameRect;
 - (void) dealloc;
 
 #pragma mark Methods

@@ -14,8 +14,8 @@
 
 	#pragma mark Constructors
 
-- (id) init{
-	if(self = [super init]){
+- (id) initWithFrame:(NSRect)frameRect{
+	if(self = [super initWithFrame:frameRect]){
 		// Initialize it with a generic string.
 		[self setTitlee:[[NSString alloc] initWithString:@"This is a title"]];
 		[self setDesc:[[NSString alloc] initWithString:@"This is a description"]];
@@ -24,8 +24,8 @@
 	return self;
 }
 
-- (id) initRandom{
-	if(self = [super init]){
+- (id) initRandomWithFrame:(NSRect)frameRect{
+	if(self = [super initWithFrame:frameRect]){
 		// Initialize it with a random string.
 		InstapaperUtilities *util = [[InstapaperUtilities alloc] init];
 		[self setTitlee:[util genRandStringWithLength:10]];
@@ -38,8 +38,8 @@
 	return self;
 }
 
-- (id) initWithId:(int)this_article_id{
-	if(self = [super init]){
+- (id) initWithId:(int)this_article_id frame:(NSRect)frameRect{
+	if(self = [super initWithFrame:frameRect]){
 		// Initialize it with a more specific string.
 		[self setTitlee:[NSString stringWithFormat:@"Article %d", this_article_id]];
 		[self setDesc:[NSString stringWithFormat:@"Description %d", this_article_id]];
@@ -50,8 +50,8 @@
 	return self;
 }
 
-- (id) initWithTitle:(NSString*)title description:(NSString*)description linkk:(NSString*)linkk{
-	if(self = [super init]){
+- (id) initWithTitle:(NSString*)title description:(NSString*)description linkk:(NSString*)linkk frame:(NSRect)frameRect{
+	if(self = [super initWithFrame:frameRect]){
 		// Initialize it with what was inputted.
 		[self setTitlee:title];
 		[self setDesc:description];
@@ -87,8 +87,10 @@
 
 - (void)drawRect:(NSRect)dirtyRect {
 	// Show the view.
-	//[[NSColor blueColor] set];
-    NSRectFill(self.bounds);
+	[[NSColor redColor] set]; // Sets current drawing color.
+	NSRectFill(self.bounds); // Defines a rectangle and then fills it with the current drawing color.
+	[[NSColor colorWithCalibratedRed:0.7 green:0.9 blue:0.3 alpha:1.0] set]; // Sets a new color.
+	[[NSBezierPath bezierPathWithOvalInRect:NSMakeRect(5, 0, 10, 10)] fill]; // Draws a circle in the new color.
 }
 
 @end

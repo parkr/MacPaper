@@ -17,9 +17,9 @@
 	//		creating an article (NSView) for the view controller,
 	//		and give the view controller some X and Y coordinates.
 	if(self = [super initWithNibName:@"Article" bundle:nil]){
-		article = [[InstapaperArticle alloc] init];
 		self.posx = xval;
 		self.posy = yval;
+		article = [[InstapaperArticle alloc] initWithFrame:NSMakeRect(self.posx, self.posy, VIEW_WIDTH, VIEW_HEIGHT)];
 		[self updateView];
 	}
 	return self;
@@ -30,9 +30,9 @@
 	//		creating an article (NSView) for the view controller,
 	//		and give the view controller some X and Y coordinates.
 	if(self = [super initWithNibName:@"Article" bundle:nil]){
-		article = [[InstapaperArticle alloc] initRandom];
 		self.posx = xval;
 		self.posy = yval;
+		article = [[InstapaperArticle alloc] initRandomWithFrame:NSMakeRect(self.posx, self.posy, VIEW_WIDTH, VIEW_HEIGHT)];
 		[self updateView];
 	}else {
 		self = nil;
@@ -45,9 +45,9 @@
 	//		creating an article (NSView) for the view controller,
 	//		and give the view controller some X and Y coordinates.
 	if(self = [super initWithNibName:@"Article" bundle:nil]){
-		article = [[InstapaperArticle alloc] initWithId:this_article_id];
 		self.posx = xval;
 		self.posy = yval;
+		article = [[InstapaperArticle alloc] initWithId:this_article_id frame:NSMakeRect(self.posx, self.posy, VIEW_WIDTH, VIEW_HEIGHT)];
 		if (article == nil) {
 			NSLog(@"You fucked up.");
 		}
@@ -63,9 +63,9 @@
 	//		creating an article (NSView) for the view controller,
 	//		and give the view controller some X and Y coordinates.
 	if(self = [super initWithNibName:@"Article" bundle:nil]){
-		article =  [[InstapaperArticle alloc] initWithTitle:title description:description linkk:linkk];
 		self.posx = xval;
 		self.posy = yval;
+		article =  [[InstapaperArticle alloc] initWithTitle:title description:description linkk:linkk frame:NSMakeRect(self.posx, self.posy, VIEW_WIDTH, VIEW_HEIGHT)];
 		[self updateView];
 	}
 	return self;
@@ -90,7 +90,6 @@
 	[titleField setStringValue:[article titlee]];
 	[descField setStringValue:[article desc]];
 	[linkField setStringValue:[article link]];
-	article.frame = NSMakeRect(self.posx, self.posy, VIEW_WIDTH, VIEW_HEIGHT);
 	[self setView:article];
 	[article display];
 }
