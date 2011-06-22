@@ -87,8 +87,8 @@
 
 - (void)drawRect:(NSRect)dirtyRect {
 	// Show the view.
-	[[NSColor redColor] set]; // Sets current drawing color.
-	//NSRectFill(self.bounds); // Defines a rectangle and then fills it with the current drawing color.
+	[[NSColor redColor] setFill]; // Sets current drawing color.
+	NSRectFill(self.bounds); // Defines a rectangle and then fills it with the current drawing color.
 	[[NSColor colorWithCalibratedRed:0.7 green:0.9 blue:0.3 alpha:1.0] set]; // Sets a new color.
 	[[NSBezierPath bezierPathWithOvalInRect:NSMakeRect(5, 0, 10, 10)] fill]; // Draws a circle in the new color.
 }

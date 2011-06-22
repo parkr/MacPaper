@@ -17,7 +17,6 @@
 	// Need to have that content scroll. (used IB to create scroll view inside window. Put content inside this window.)
 	NSArray *wSubviews = [[window contentView]subviews];
 	[window setContentView:[wSubviews objectAtIndex:0]];
-	[wSubviews release];
 	// Gotta finish opening the app.
 	[window setWindowController:[[InstapaperController alloc] init:window]];
 	// What do we have?
@@ -25,9 +24,21 @@
 	[window makeKeyAndOrderFront:self];
 }
 
-- (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)sender
-{
+- (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)sender{
 	return YES;
+}
+
+- (IBAction)openPreferencePanel:(id)sender {
+    
+    NSImage *img = [NSImage imageNamed:@"Macpaper"];
+    NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:
+							 @"0.1", @"Version",
+							 @"Macpaper", @"ApplicationName",
+							 img, @"ApplicationIcon",
+							 @"Copyright 2011, Parker Moore", @"Copyright",
+							 @"Macpaper v0.1", @"ApplicationVersion",
+							 nil];
+    [[NSApplication sharedApplication] orderFrontStandardAboutPanelWithOptions:options];
 }
 
 @end

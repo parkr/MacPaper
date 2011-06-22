@@ -14,5 +14,6 @@
 
 - (id) init:(NSWindow*)window;
 - (void) awakeFromNib;
+- (IBAction) reloadArticles:(id)sender;
 
 @end

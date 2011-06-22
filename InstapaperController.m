@@ -61,4 +61,8 @@ int article_id;
 	}
 }
 
+- (IBAction) reloadArticles:(id)sender{
+	
+}
+
 @end

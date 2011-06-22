@@ -14,4 +14,6 @@
 
 @property (assign) IBOutlet NSWindow *window;
 
+- (IBAction)openPreferencePanel:(id)sender;
+
 @end
